@@ -1,0 +1,16 @@
+/*Variables de colores*/
+:root {
+    --color-headerBuscador: #97122b;
+    --color-headerMenu: #F5A100;
+    --color-fondo: #f8f8f8;
+    --color-texto: #333;
+
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+}

@@ -1,16 +1,60 @@
 /*Variables de colores*/
 :root {
-    --color-headerBuscador: #97122b;
+    --color-headerBarra: #97122b;
     --color-headerMenu: #F5A100;
     --color-fondo: #f8f8f8;
     --color-texto: #333;
 
 }
 
-body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header {
+    background-color: var(--color-headerBarra);
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilos para el menú de navegación */
+h1 {
+    color: var(--color-headerMenu);
+    margin: 10px;
+}
+
+ul {
+    list-style-type: none;
+    /*saca los puntos de la lista*/
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul li a {
+    display: block;
+    color: var(--color-texto);
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul li a:hover:not(.active) {
+    background-color: var(--color-headerMenu);
+}
+
+ul li a.active {
+    background-color: var(--color-headerMenu);
 }

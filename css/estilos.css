@@ -1,9 +1,9 @@
 /*Variables de colores*/
 :root {
     --color-headerBarra: #97122b;
-    --color-headerMenu: #F5A100;
-    --color-fondo: #f8f8f8;
-    --color-texto: #333;
+    --color-hover: #F5A100;
+    --color-fondo: #8B261E;
+    --color-texto: #ffffff;
 
 }
 
@@ -22,16 +22,21 @@ body {
 
 /*la barra de navegación / nav fija*/
 header {
-    background-color: var(--color-headerBarra);
+    position: fixed;
     top: 0;
     left: 0;
-
+    width: 100%;
+    background-color: var(--color-headerBarra);
+    padding: 1rem 2rem;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
     text-align: center;
 }
 
 
 h1 {
-    color: var(--color-headerMenu);
+    color: var(--color-texto);
     margin: 0;
 }
 
@@ -53,11 +58,11 @@ ul li a {
 }
 
 ul li a:hover:not(.active) {
-    background-color: var(--color-headerMenu);
+    background-color: var(--color-hover);
 }
 
 ul li a.active {
-    background-color: var(--color-headerMenu);
+    background-color: var(--color-hover);
 }
 
 main {
@@ -65,3 +70,74 @@ main {
 }
 
 /*-----------pagina lugares--------------*/
+/*estilo de la imagen de fondo del hero*/
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url("../imagenes/logo-pag-lugares.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin: 1rem 0 2rem;
+
+}
+
+section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*galeria de inagenes*/
+
+div.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+div.gallery-item {
+    margin: 5px;
+    border: 1px solid #ccc;
+    width: 180px;
+}
+
+div.gallery-item:hover {
+    border: 1px solid #777;
+}
+
+div.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+div.gallery-item div.desc {
+    padding: 15px;
+    text-align: center;
+}

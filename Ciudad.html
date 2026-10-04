@@ -1,166 +1,392 @@
-<DOCTYPE html>
-    <html lang="es">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciudad de Roma - La Ciudad Eterna</title>
+    <style>
+        :root {
+            --primary-color: #49a565; /* verde */
+            --secondary-color: #da2020; /* rojo */
+            --text-color: #191a1a;/* color del texto de la pagina */
+            --bg-color: #f7efd2; /* color fondo pagina Blanco marfil */
+            --card-bg: rgb(255, 255, 255);/* color de fondo de las tarjetas */
+        }
 
-    <head>
-        <meta charset="UTF-8">
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);/* color del texto de la pagina */
+            background-color: var(--bg-color);
+        }
+        header {
+    /* Imagen directa en alta definición con una capa oscura más suave (30%) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                      url("https://upload.wikimedia.org/wikipedia/commons/0/0b/Rome_skyline_panorama.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;/*color del texto del encabezado */
+    padding: 100px 20px;
+    text-align: center;
+    filter: contrast(108%) brightness(102%);
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Lenguajes Tecnologicos 1</title>
-    </head>
+        }
 
-    <body>
+        header h1 {
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
-        <header>
-            <h1>Roma</h1>
-            <p>La Ciudad Eterna (Urbs Aeterna)</p>
-        </header>
+        header p {
+            font-style: italic;
+            font-size: 2rem;
+            color: var(--secondary-color);
+        }
+    
+        nav {
+            background-color: #8B0000 ;/*color de fondo del menu*/
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-        <nav>
-            <ul>
-                <li><a href="#historia">Historia</a></li>
-                <li><a href="#lugares">Lugares Turísticos</a></li>
-                <li><a href="#datos">Datos Clave</a></li>
-            </ul>
-        </nav>
+        nav ul  {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
 
-        <div class="container">
+        nav ul li a {
+            display: block;
+            color: rgb(255, 255, 255); 
+            color: var(--primary-color); /* color de los enlaces del menu */
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
 
-            <section id="historia">
-                <h2>Historia de Roma</h2>
-                <p>Roma es una de las ciudades más antiguas e influyentes del mundo, fundada según la tradición en el
-                    año 753 a.C. por los hermanos Rómulo y Remo. A lo largo de los siglos, pasó de ser un pequeño
-                    asentamiento a las orillas del río Tíber a convertirse en la cuna del vasto Imperio Romano, el cual
-                    moldeó las bases de la cultura occidental, el derecho, el arte y la arquitectura.</p>
-                <p>Hoy en día, la capital de Italia es un museo a cielo abierto que fusiona perfectamente sus restos
-                    arqueológicos de más de dos milenios con la vida urbana y vibrante del siglo XXI.</p>
-            </section>
+        nav ul li a:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
 
-            <section id="lugares">
-                <h2>Lugares Turísticos Imperdibles</h2>
-                <p>Roma cuenta con una inmensa riqueza monumental. Algunos de sus puntos más emblemáticos son:</p>
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
 
-                <div class="grid-lugares">
-                    <div class="lugar-card">
-                        <h3>El Coliseo</h3>
-                        <p>El anfiteatro más famoso de la antigüedad clásica, donde se celebraban las luchas de
-                            gladiadores y espectáculos públicos.</p>
-                    </div>
-                    <div class="lugar-card">
-                        <h3>El Panteón</h3>
-                        <p>Una obra maestra de la arquitectura romana con su imponente cúpula de hormigón y su óculo
-                            abierto al cielo.</p>
-                    </div>
-                    <div class="lugar-card">
-                        <h3>Fontana di Trevi</h3>
-                        <p>La fuente barroca más espectacular del mundo. La tradición dice que debes lanzar una moneda
-                            para asegurar tu regreso a Roma.</p>
-                    </div>
-                    <div class="lugar-card">
-                        <h3>Vaticano</h3>
-                        <p>El estado más pequeño del mundo y sede de la Iglesia Católica, hogar de la Basílica de San
-                            Pedro y los Museos Vaticanos.</p>
-                    </div>
-                    <div class="lugar-card">
-                        <h3> Castillo de Sant Angelo</h3>
-                        <p>En su orígen fue mausoleo del emperador Adriano. Recibe su nombre actual en el año 590 cuando
-                            el papa Gregorio I observó en la cúspide del castillo al Arcángel San Miguel envainando su
-                            espada. En ese momento finalizó la peste que hasta entonces había azotado Roma.</p>
-                    </div>
-                    <div class="lugar-card">
-                        <h3>Plaza Navona</h3>
-                        <p>Una de las plazas más bellas de Roma, famosa por sus fuentes barrocas y su ambiente animado
-                            con artistas callejeros y cafeterías al aire libre.</p>
-                    </div>
-                    <div class="lugar-card">
-                        <h3>Museos Capitolinos</h3>
-                        <p>En la antigua colina del Capitolio se alza sobre la ciudad. Es uno de los mejores museos del
-                            mundo construido sobre el lugar del antiguo templo de la tríade, fue el primer museo público
-                            conocido como tal e inaugurado en 1734 por el Papa Clemente XIII.</p>
-                    </div>
-                    <div class="lugar-card">
-                        <h3>Galeria Borghese</h3>
-                        <p>Construido en el interior de la Villa Borghese, este museo fue en su día el palacio de esta
-                            adinerada y poderosa familia sienesa. Un lugar de interés único por la riqueza de sus
-                            colecciones de arte.</p>
-                    </div>
-                    <div class="lugar-card">
-                        <h3>Santa Maria in Trastevere</h3>
-                        <p>Una de las iglesias más hermosas de Roma, conocida por su arquitectura gótica. Esta basílica
-                            es una de las más antiguas de Roma y la primera que fue dedicada a la Virgen María.</p>
-                    </div>
-                    <div class="lugar-card">
-                        <h3>El Palacio Barberini</h3>
-                        <p>Un palacio barroco construido en el siglo XVIII para la familia Barberini. Ha pasado a ser
-                            sede de la Galleria Nazionale d'Arte Antica. Se ha convertido así en uno de los museos más
-                            prestigiosos y con mayor número de obras de arte de la Ciudad Eterna.</p>
-                    </div>
+        section {
+            background: var(--card-bg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(218, 147, 147, 0.63);/* color de la sombra de las secciones */
+            border-left: 5px solid var(--primary-color);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #918b8b;/* color de la linea debajo del titulo */
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .grid-lugares {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .lugar-card {
+            background: #fdfdfd;/*COLOR DE LAS TARJETAS*/ 
+            border: 1px solid rgb(245, 176, 174); /* color fondo de las tarjetas */
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-top: 3px solid var(--secondary-color);
+        }
+
+        .lugar-card h3 {
+            color: var(--primary-color);/* color de los titulos de las tarjetas */
+            margin-bottom: 0.5rem;
+        }
+
+        .datos-tabla {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .datos-tabla th, .datos-tabla td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;/*color de las lineas de la tabla */
+        }
+
+        .datos-tabla th {
+            background-color: var(--primary-color);/* color de los encabezados de la tabla */
+            color: white;
+        }
+
+        .datos-tabla tr:nth-child(even) {
+            background-color: #f9f9f9;/* color de las filas pares de la tabla */
+        }
+
+        footer {
+            background-color: #222;/* color de fondo del pie de pagina */
+            color: #ccc;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        footer span {
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li a {
+                padding: 0.75rem;
+            }
+        }
+        
+
+        .Donde-comer-container {
+            display: inline-flex;
+         flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: center;
+        gap: 14px;
+    
+         max-width: 1200px;
+        margin: 0 auto;
+        background-color: rgb(239, 240, 231);
+        }
+        .Ristorante Aroma {
+            align-self: flex-start;
+        }
+
+        .La Gelateria Frigidarium {
+        align-self: center;
+        }
+
+    
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Roma</h1>
+        <p>La Ciudad Eterna (Urbs Aeterna)</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#lugares">Lugares Turísticos</a></li>
+            <li><a href="#datos">Datos Clave</a></li>
+            <li><a href="#donde-comer">Donde Comer</a></li>
+            <li><a href="#donde-hospedarse">Donde Hospedarse</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#imágenes">Imágenes</a></li>
+            <li><a href="#mapa">Mapa</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <section id="historia">
+            <h2>Historia de Roma</h2>
+            <p>Roma es una de las ciudades más antiguas e influyentes del mundo, fundada según la tradición en el año 753 a.C. por los hermanos Rómulo y Remo. A lo largo de los siglos, pasó de ser un pequeño asentamiento a las orillas del río Tíber a convertirse en la cuna del vasto Imperio Romano, el cual moldeó las bases de la cultura occidental, el derecho, el arte y la arquitectura.</p>
+            <p>Hoy en día, la capital de Italia es un museo a cielo abierto que fusiona perfectamente sus restos arqueológicos de más de dos milenios con la vida urbana y vibrante del siglo XXI.</p>
+        </section>
+
+        <section id="lugares">
+            <h2>Lugares Turísticos Imperdibles</h2>
+            <p>Roma cuenta con una inmensa riqueza monumental. Algunos de sus puntos más emblemáticos son:</p>
+            
+            <div class="grid-lugares">
+                <div class="lugar-card">
+                    <h3>El Coliseo</h3>
+                    <p>El anfiteatro más famoso de la antigüedad clásica, donde se celebraban las luchas de gladiadores y espectáculos públicos.</p>
                 </div>
+                <div class="lugar-card">
+                    <h3>El Panteón</h3>
+                    <p>Una obra maestra de la arquitectura romana con su imponente cúpula de hormigón y su óculo abierto al cielo.</p>
+                </div>
+                <div class="lugar-card">
+                    <h3>Fontana di Trevi</h3>
+                    <p>La fuente barroca más espectacular del mundo. La tradición dice que debes lanzar una moneda para asegurar tu regreso a Roma.</p>
+                </div>
+                <div class="lugar-card">
+                    <h3>Vaticano</h3>
+                    <p>El estado más pequeño del mundo y sede de la Iglesia Católica, hogar de la Basílica de San Pedro, los Museos Vaticanos que poseen una de las colecciones artísticas más extensas del mundo. Rafael, Caravaggio o Leonardo da Vinci son algunos de los pintores que están presentes, y la Capilla Sixtina es el punto culminante..</p>
+                </div>
+                <div class="lugar-card">
+                    <h3> Castillo de Sant Angelo</h3>
+                    <p>En su orígen fue mausoleo del emperador Adriano. Recibe su nombre actual en el año 590 cuando el papa Gregorio I observó en la cúspide del castillo al Arcángel San Miguel envainando su espada. En ese momento finalizó la peste que hasta entonces había azotado Roma.</p>
+                </div>
+                <div class="lugar-card">
+                    <h3>Plaza Navona</h3>
+                    <p>Una de las plazas más bellas de Roma, sorprende por su importante patrimonio histórico, destacando la Fontana dei Quattro Fiumi. Esta obra de Gian Lorenzo Bernini sorprende por su conjunto escultórico, que representa al Nilo, el Río de la Plata, el Danubio y el Ganges. .</p>
+                </div>
+                <div class="lugar-card">
+                    <h3>Museos Capitolinos</h3>
+                    <p>En la antigua colina del Capitolio se alza sobre la ciudad. Es uno de los mejores museos del mundo construido sobre el lugar del antiguo templo de la tríade, fue el primer museo público conocido como tal e inaugurado en 1734  por el  Papa  Clemente  XIII.</p>
+                </div>
+                <div class="lugar-card">
+                    <h3>Galeria Borghese</h3>
+                    <p>Construido en el interior de la Villa Borghese, este museo fue en su día el palacio de esta adinerada y poderosa familia sienesa. Un lugar de interés único por la riqueza de sus colecciones de arte.</p>
+                </div>
+                <div class="lugar-card">
+                    <h3>Santa Maria in Trastevere</h3>
+                    <p>Una de las iglesias más hermosas de Roma, conocida por su arquitectura gótica. Esta basílica es una de las más antiguas de Roma y la primera que fue dedicada a la Virgen María.</p>
+                </div>
+                <div class="lugar-card">
+                    <h3>El Palacio Barberini</h3>
+                    <p>Un palacio barroco construido en el siglo XVIII para la familia Barberini. Ha pasado a ser sede de la Galleria Nazionale d'Arte Antica. Se ha convertido así en uno de los museos más prestigiosos y con mayor número de obras de arte de la Ciudad Eterna.</p>
+                </div>
+                <div class="lugar-card">
+                    <h3>Catacumbas de Roma</h3>
+                    <p>Una de las atracciones más fascinantes que ver en Roma se encuentra bajo tierra. Las antiguas catacumbas son túneles subterráneos que sirvieron como lugar de entierro cristiano y judío entre los siglos II y V aproximadamente.</p>    
+                </div>
+                <div class="lugar-card">
+                    <h3>Plaza de España</h3>
+                    <p>La famosa escalinata de la Piazza di Spagna, construida a principios del siglo XVIII, es uno de sus espacios más emblemáticos de la ciudad. Estos escalones conectan la base de la plaza con la Iglesia de Trinità dei Monti.</p>
+                </div>
+            </div>
 
-            </section>
+        </section>
 
-            <section id="datos">
-                <h2>Datos de Interés</h2>
-                <table class="datos-tabla">
-                    <thead>
-                        <tr>
-                            <th>Concepto</th>
-                            <th>Detalle</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>País</strong></td>
-                            <td>Italia</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Ciudad capital</strong></td>
-                            <td>Del Pais</td>
-                        <tr>
-                            <td><strong>Una ciudad</strong></td>
-                            <td>Dos estados</td>
-                        </tr>
-                        <tr>
-                            <td><strong>ciudad de iglesias</strong></td>
-                            <td>900 templos</td>
-                        </tr>
-                        <tr>
+        <section id="datos">
+            <h2>Datos de Interés</h2>
+            <table class="datos-tabla">
+                <thead>
+                    <tr>
+                        <th>Concepto</th>
+                        <th>Detalle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>País</strong></td>
+                        <td>Italia</td>
+                    </tr>
+                    <tr>
+                        <td><strong>capital</strong></td>
+                        <td>Del Pais</td>
+                    <tr>
+                        <td><strong>Una ciudad</strong></td>
+                        <td>Dos estados</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ciudad de iglesias</strong></td>
+                        <td>900 templos</td>
+                    </tr>
+                    <tr>
+                        
+                        <td><strong>Región</strong></td>
+                        <td>Lacio (Lazio)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Población aproximada</strong></td>
+                        <td>2.8 millones de habitantes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Idioma oficial</strong></td>
+                        <td>Italiano</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Moneda</strong></td>
+                        <td>Euro (€)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Clima</strong></td>
+                        <td>Mediteráneo</td>
+                    </tr>
+                   
+                    <tr>
+                        <td><strong>Superficie</strong></td>
+                        <td>1.285 km²</td>
+                    </tr>
 
-                            <td><strong>Región</strong></td>
-                            <td>Lacio (Lazio)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Población aproximada</strong></td>
-                            <td>2.8 millones de habitantes</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Idioma oficial</strong></td>
-                            <td>Italiano</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Moneda</strong></td>
-                            <td>Euro (€)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Clima</strong></td>
-                            <td>Mediteráneo</td>
-                        </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="donde-comer">
+            <h2>Donde comer</h2>
+            <p>Teniendo en cuenta que una de las mejores experiencias en Roma es disfrutar de su gastronomía, te aconsejamos no dejar este aspecto al azar y tener mínimo una idea de los lugares donde comer en la ciudad, para poder disfrutar de una experiencia de sabores inolvidables.:</p>
+                <p>Sea cuál sea tu ruta por la ciudad acabarás pasando en algun momento por alguno de los restaurantes que te recomendamos, ya que todos están ubicados en los lugares más conocidos de la ciudad.:</p>
+        
+                <div class="Donde comer-container">
+                
+        <div class="Ristorante Aroma"><strong>Ristorante Aroma</strong></div>
+            <p>ofrece una experiencia culinaria con una prodigiosa vistas al Coliseo para un almuerzo o cena digno de un gladiador.</p>
+        <div><strong>Trattoria Da Enzo al 29</strong></div>
+            <p>Ubicado en el Trastevere, nos encontramos con un pequeño restaurante y con un ambiente familiar, pese a haberse convertido en los últimos tiempos en uno de los más frecuentados por turistas, se sigue sirviendo algunas de las mejores pastas que vas a probar </p>
+        <div><strong>Pizzeria La Montecarlo</strong></div>
+            <p> Conocida por sus pizzas al estilo romano, finas y crujientes.</p>
+        <div><strong>Rione XIV:</strong></div>
+            <p>Este pequeño restaurante, ubicado en el Vaticano, es otro de los más recomendados, en el que destacan además de las pizzas, la pasta hecha en casa.</p>
+        <div><strong>Osteria Da Fortunata:</strong></div>
+            <p>Ubicada muy cerca de Campo di Fiori y Piazza Navona este es conocido por tener una carta elaborada con productos de primera calidad y la posibilidad de comer pasta fresca viendo cómo la elaboran, directamente desde una de las ventanas. </p>
+        <div><strong>Grano Frutta e Farina:</strong></div>
+            <p>Este pequeño local es otro de los restaurantes más conocidos y también más recomendados, sobre todo si quieres comer o cenar algo rápido por un precio ajustado. Ubicado muy cerca de Plaza España</p>
+        <div><strong>Dar Poeta:</strong></div>
+            <p>Ubicada en los puntos más turísticos de la ciudad, la pizzería tiene tres locales, dos de ellos en el Trastevere, el más famoso en la Vía de la Scala,en la que puedes degustarlas en un restaurante tradicional italiano.</p>
+        <div><strong>Otello</strong></div>
+            <P>También en el Trastevere, este es otro restaurantes famosos si quieres disfrutar de platos típicos de la gastronomía tradicional. Aunque todas las opciones de la carta son destacables, te recomendamos decantarte por la pasta Cacio e Pepe y la Carbonara</p>
+        <div><strong>La Casa del Caffe Tazza d Oro:</strong></div>
+            <p>Conocido por ser una de las cafeterías más famosas de Roma, este es el lugar perfecto en el que tomar un café expreso por 0,90 céntimos, de pie en la barra y justo al lado de la Fontana di Trevi.</p>
+        <div class="La Gelateria Frigidarium"><strong>La Gelateria Frigidarium:</strong></div>
+            <p>.Conocida por ser una de las mejores heladerías de Roma, este pequeño local, ubicado muy cerca de Piazza Navona, es directamente un auténtico pecado no ir si te gustan los helados artesanales, ya que nada volverá a ser lo mismo después de probarlos</p>
+    
+                </div>
+                </section>
+        <section id="donde-hospedarse">
+            <h2>Donde Hospedarse</h2>
+            <p>¡Hoy nos vamos a Roma! les proponemos un juego para escoger el hotel perfecto para una estadia perfecta, imaginen que estan en la Fontana di Trevi y que lanzan una moneda atrás y piensan: “deseo conocer los hoteles más bonitos de Roma”</p>
+            <ul>
+        
+                <li><strong>Hotel Roma:</strong> Ubicado en el corazón de la ciudad, con servicio de habitaciones y restaurante.</li>
+                <li><strong>Residenza di Roma:</strong> Un hotel boutique con un ambiente acogedor y servicio personalizado.</li>
+                <li><strong>Arco dei Tolomei:</strong>¿Buscas dónde alojarte en Roma, pero tu prepuesto es ajustado? Hemos visto pocos, muy pocos Bed & Breakfast, una increíble casa de invitados ubicada en un antiguo palacio romano en el Trastevere medieval, a unos pasos del río Tíber</li>
+                <li><strong>Design & Art Pie:</strong>ES un pequeño hotel situado en la primera planta de un edificio del siglo XIX que es el punto de partida ideal para visitar la ciudad, a medio kilómetro de la Fontana di Trevi y del Panteón, encontramos este precioso hotel de solo 4 habitaciones con diseños y decoración individuales,</li>
+                <li><strong>B&B Roma Cheap & Chic:</strong>. Otro Bed & Breakfast donde dodormir y como su propio nombre lo indica, es bonito y barato, adema se localiza a tan solo 100 metros de la estación de Vittorio Emanuele y a 10 minutos a pie del Coliseo</li>
+            </ul>
+        </section>
+    </div>
 
-                        <tr>
-                            <td><strong>Superficie</strong></td>
-                            <td>1.285 km²</td>
-                        </tr>
+    <footer>
+        <p>&copy; 2026 - Unahur;Lenguajes tecnologico 1: Ciudad de Roma. Creado con orgullo</p>
+    </footer>
 
-                    </tbody>
-                </table>
-            </section>
-
-        </div>
-
-        <footer>
-            <p>&copy; 2026 - Unahur;Lenguajes tecnologico 1: Ciudad de Roma. Creado con orgullo</p>
-        </footer>
-
-    </body>
-
-    </html>
+</body>
+</html>
+>

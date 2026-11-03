@@ -4,13 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
     <title>Turismo en Roma</title>
 </head>
 
 <body>
     <header>
         <h1>Lugares</h1>
+        <button id="btnModo" class="btn btn-outline-dark">Modo claro</button>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -19,69 +26,80 @@
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
+
     </header>
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h2>Vivi tu experiencia.</h2>
+                <h2>Roma</h2>
                 <p>Explora los lugares
                     más interesantes de nuestra ciudad.</p>
             </div>
         </section>
         <section>
+            <h3>Visitas guiadas por el coliseo, el castillo de San Angelo y la Galería Borghese</h3>
+
             <div class="gallery">
                 <div class="gallery-item">
-                    <a target="_blank" href="coliseo.png">
-                        <img src="coliseo.png" alt="Coliseo" width="600" height="400">
+                    <a href="#artColiseo">
+                        <img src="imagenes/coliseo.png" alt="" width="600" height="400">
                     </a>
-                    <div class="desc">Coliseo</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Coliseo</h4>
+                        <p class="card-text">En esta visita conocerás la historia del Coliseo y sus alrededores.</p>
+                        <p class="card-text"><small class="fg-2">ver mas</small></p>
+                    </div>
                 </div>
 
                 <div class="gallery-item">
-                    <a target="_blank" href="castillo-san-angelo.png">
-                        <img src="castillo-san-angelo.png" alt="Castillo de San Angelo" width="600" height="400">
+                    <a href="#artCastillo">
+                        <img src="imagenes/castillo-puente-sant-angelo.png" alt="Castillo de San Angelo" width="600"
+                            height="400">
                     </a>
-                    <div class="desc">Castillo de San Angelo</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Castillo de San Angelo</h4>
+                        <p class="card-text">Descubre la historia y la arquitectura del Castillo de San Angelo.</p>
+                        <p class="card-text"><small class="fg-2">ver mas</small></p>
+                    </div>
                 </div>
 
                 <div class="gallery-item">
-                    <a target="_blank" href="galeria-borghese.png">
-                        <img src="galeria-borghese.png" alt="Galería Borghese" width="600" height="400">
+                    <a href="#artBorghese">
+                        <img src="imagenes/galeria-borghese.png" alt="Galería Borghese" width="600" height="400">
                     </a>
-                    <div class="desc">Galería Borghese</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Galería Borghese</h4>
+                        <p class="card-text">Descubre la historia y la arquitectura de la Galería Borghese.</p>
+                        <p class="card-text"><small class="fg-2">ver mas</small></p>
+                    </div>
                 </div>
-
-                <div class="gallery-item">
-                    <a target="_blank" href="logo-pag-lugares.png">
-                        <img src="logo-pag-lugares.png" alt="Logo" width="600" height="400">
-                    </a>
-                    <div class="desc">Logo</div>
-                </div>
-
             </div>
-            <section>
-                <article>
-                    <h3>Galería Borghese</h3>
+
+            <section class="articulos">
+                <article id="artBorghese">
+                    <h5>Galería Borghese</h5>
                     <p>La Galería Borghese es un museo de arte italiano ubicado en Roma.<strong>Es uno de los museos más
                             importantes de la ciudad </strong> y alberga una impresionante colección de obras de arte.
                     </p>
+
                     <figure>
-                        <img src="imagenes/galeria-borghese.png" alt="Galería Borghese en Roma">
+                        <img src="imagenes/galeria-borghese.png" alt="Galería Borghese">
                         <figcaption>Galería Borghese</figcaption>
+
                     </figure>
                 </article>
-                <article>
-                    <h3>Coliseo</h3>
-                    <p>El Coliseo es un anfiteatro romano ubicado en el centro de Roma. <strong>Es uno de los monumentos
-                            más
+                <article id="artColiseo">
+                    <h5>Coliseo</h5>
+                    <p>El Coliseo es un anfiteatro romano ubicado en el centro de Roma. <strong>Es uno de los monumento
+                            mas más
                             emblemáticos de la ciudad y un símbolo del Imperio Romano.</strong></p>
                     <figure>
                         <img src="imagenes/coliseo.png" alt="Coliseo de Roma">
                         <figcaption>Coliseo</figcaption>
                     </figure>
                 </article>
-                <article>
-                    <h3>Castillo de San Angelo</h3>
+                <article id="artCastillo">
+                    <h5>Castillo de San Angelo</h5>
                     <p>El Castillo de San Angelo <strong> es un fortín ubicado en el río Tíber</strong>, en la ciudad de
                         Roma. Fue construido
                         en el siglo IV d.C. y ha sido utilizado como fortaleza a lo largo de la historia.</p>
@@ -103,7 +121,8 @@
 
         <p>&copy; 2026 sitio oficial de la ciudad. Todos los derechos reservados.</p>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 

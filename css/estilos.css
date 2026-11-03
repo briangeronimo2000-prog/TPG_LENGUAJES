@@ -17,8 +17,29 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: var(--color-fondo);
     color: var(--color-texto);
+    transition: background-color 0.3s ease, color 0.3s ease;
 
 }
+
+/*estilo del boton de modo claro*/
+body.modo-claro {
+    background-color: #f5f5f5;
+    color: #0c0c0c;
+}
+
+body.modo-claro header {
+    background-color: #ffffff;
+    color: #0c0c0c;
+}
+
+body.modo-claro header ul li a {
+    color: #333;
+}
+
+
+
+
+
 
 /*la barra de navegación / nav fija*/
 header {
@@ -29,6 +50,8 @@ header {
     background-color: var(--color-headerBarra);
     padding: 1rem 2rem;
     z-index: 100;
+    /* Asegura que el menú quede por encima del resto del contenido */
+
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -51,7 +74,7 @@ ul {
 }
 
 ul li a {
-    display: block;
+    display: flex;
     color: var(--color-texto);
     padding: 1em 1em;
     text-decoration: none;
@@ -73,10 +96,11 @@ main {
 /*estilo de la imagen de fondo del hero*/
 .hero {
     position: relative;
-    height: 100vh;
-    background-image: url("../imagenes/logo-pag-lugares.png");
+    height: 85vh;
+    background-image: url("../imagenes/coliseo-de-noche.png");
     background-size: cover;
     background-position: center;
+
 }
 
 .hero::before {
@@ -96,14 +120,14 @@ main {
 }
 
 .hero-content h2 {
-    font-size: 1.5rem;
-    font-weight: 900;
+    font-size: 5rem;
+    font-weight: 1000;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 }
 
 .hero-content p {
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin: 1rem 0 2rem;
 
 }
@@ -112,6 +136,7 @@ section {
     padding: 5rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+
 }
 
 /*galeria de inagenes*/
@@ -119,17 +144,19 @@ section {
 .gallery {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
     justify-content: flex-start;
 }
 
 .gallery-item {
-    margin: 5px;
+
     border: 1px solid #ccc;
-    width: 250px;
+    flex: 1 1 300px;
+    /*esto se usa para que las imagenes se acomoden en filas de 3 y se ajusten al tamaño de la pantalla*/
 }
 
 .gallery-item:hover {
-    border: 1px solid #777;
+    border: 3px solid #777;
 }
 
 .gallery-item img {
@@ -140,4 +167,9 @@ section {
 .gallery-item div.desc {
     padding: 15px;
     text-align: center;
+}
+
+/*estilo de los articulos de la pagina lugares*/
+.articulos {
+    font-family: "Roboto Condensed", sans-serif;
 }

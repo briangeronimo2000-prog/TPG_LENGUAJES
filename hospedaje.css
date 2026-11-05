@@ -1,0 +1,59 @@
+/* Estilos propios SOLO para la sección #donde-hospedarse.
+   Se apoyan en Bootstrap y no tocan el resto de la página.
+   Se usa el id #donde-hospedarse para ganarle en especificidad
+   a las reglas generales de "section", "h2" y "p" de la página. */
+
+#donde-hospedarse.hospedaje {
+  background: linear-gradient(135deg, #8b0000 0%, #5c0a0a 100%);
+  border-left: 0;
+  border-top: 6px solid #f2c14e;
+  box-shadow: 0 10px 25px rgba(139, 0, 0, 0.35);
+  padding: 3rem 2rem 2rem;
+  color: #fff;
+}
+
+#donde-hospedarse h2 {
+  color: #f2c14e;
+  border-bottom: 2px solid rgba(242, 193, 78, 0.5);
+}
+
+#donde-hospedarse .hospedaje-intro {
+  text-align: left;
+  color: #fbeee0;
+  font-size: 1.1rem;
+}
+
+/* Etiqueta posicionada (Bootstrap pone position-absolute; acá solo el detalle visual) */
+#donde-hospedarse .hospedaje-moneda {
+  z-index: 10;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Tarjetas de hoteles: card de Bootstrap personalizada */
+#donde-hospedarse .hotel-card {
+  color: #191a1a;
+  border: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#donde-hospedarse .hotel-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+#donde-hospedarse .hotel-card .card-body {
+  padding: 2.5rem 1.25rem 1.25rem;
+}
+
+#donde-hospedarse .hotel-card .card-title {
+  color: #8b0000;
+  font-weight: 700;
+}
+
+#donde-hospedarse .hotel-card .card-text {
+  text-align: left;
+  margin-bottom: 0;
+}

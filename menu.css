@@ -1,0 +1,41 @@
+/* Menú responsive (navbar de Bootstrap) manteniendo el aspecto original:
+   fondo bordó, enlaces verdes en negrita y hover rojo.
+   No modifica el <style> de la página: solo agrega reglas con más especificidad. */
+
+nav.menu-roma {
+  background-color: #8b0000;
+  padding: 0.5rem 1rem;
+}
+
+/* Enlaces: mismos colores que el menú original */
+nav.menu-roma .nav-link {
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+  transition: background 0.3s;
+}
+
+nav.menu-roma .nav-link:hover,
+nav.menu-roma .nav-link:focus {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/* Botón hamburguesa */
+nav.menu-roma .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+nav.menu-roma .navbar-brand {
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Con el menú abierto en pantallas chicas: que no ocupe más que la pantalla */
+@media (max-width: 1199.98px) {
+  nav.menu-roma .navbar-collapse {
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+}

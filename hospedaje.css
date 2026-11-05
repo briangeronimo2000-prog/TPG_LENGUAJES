@@ -1,7 +1,4 @@
-/* Estilos propios SOLO para la sección #donde-hospedarse.
-   Se apoyan en Bootstrap y no tocan el resto de la página.
-   Se usa el id #donde-hospedarse para ganarle en especificidad
-   a las reglas generales de "section", "h2" y "p" de la página. */
+
 
 #donde-hospedarse.hospedaje {
   background: linear-gradient(135deg, #8b0000 0%, #5c0a0a 100%);
@@ -23,14 +20,12 @@
   font-size: 1.1rem;
 }
 
-/* Etiqueta posicionada (Bootstrap pone position-absolute; acá solo el detalle visual) */
 #donde-hospedarse .hospedaje-moneda {
   z-index: 10;
   font-size: 0.9rem;
   padding: 0.5rem 1rem;
 }
 
-/* Tarjetas de hoteles: card de Bootstrap personalizada */
 #donde-hospedarse .hotel-card {
   color: #191a1a;
   border: 0;

@@ -1,0 +1,59 @@
+/* Fondo con fotos y tarjetas transparentes para "Lugares Turísticos".
+   La mitad de arriba lleva la Fontana di Trevi y la de abajo la Capilla Sixtina.
+   Para ver más las fotos, bajá el 0.30 de la capa blanca (0 = foto sin capa). */
+
+.grid-lugares {
+    position: relative;
+    isolation: isolate;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f3e7c6;
+}
+
+.grid-lugares::before,
+.grid-lugares::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.grid-lugares::before {
+    top: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.30), rgba(255, 255, 255, 0.30)),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Trevi_Fountain,_Rome,_Italy_2_-_May_2007.jpg?width=1400");
+}
+
+.grid-lugares::after {
+    bottom: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.30), rgba(255, 255, 255, 0.30)),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Rome_Sistine_Chapel_01.jpg?width=1400");
+}
+
+/* Tarjetas transparentes tipo vidrio */
+.grid-lugares .lugar-card {
+    background: rgba(255, 255, 255, 0.35);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-top: 3px solid var(--secondary-color);
+    color: #111;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.9);
+}
+
+.grid-lugares .lugar-card h3 {
+    color: #8B0000;
+}
+
+.creditos-fotos-lugares {
+    margin-top: 0.75rem;
+    font-size: 0.78rem;
+    color: #6b6b6b;
+    text-align: center;
+}

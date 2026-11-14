@@ -27,13 +27,13 @@
 
 .Donde-comer-container::before {
     top: 0;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)),
+    background-image: linear-gradient(rgba(255, 255, 255, 0.70), rgba(255, 255, 255, 0.70)),
         url("https://commons.wikimedia.org/wiki/Special:FilePath/Eq_it-na_pizza-margherita_sep2005_sml.jpg?width=1000");
 }
 
 .Donde-comer-container::after {
     bottom: 0;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)),
+    background-image: linear-gradient(rgba(255, 255, 255, 0.70), rgba(255, 255, 255, 0.70)),
         url("https://commons.wikimedia.org/wiki/Special:FilePath/Tiramisu_-_Raffaele_Diomede.jpg?width=1000");
 }
 

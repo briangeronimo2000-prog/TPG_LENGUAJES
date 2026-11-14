@@ -1,6 +1,4 @@
-/* Menú responsive (navbar de Bootstrap) manteniendo el aspecto original:
-   fondo bordó, enlaces verdes en negrita y hover rojo.
-   No modifica el <style> de la página: solo agrega reglas con más especificidad. */
+
 
 nav.menu-roma {
   background-color: #8b0000;

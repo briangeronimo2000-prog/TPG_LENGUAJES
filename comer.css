@@ -1,6 +1,4 @@
-/* Fondo con fotos para la lista de restaurantes de la sección "Donde comer".
-   La mitad de arriba lleva una pizza y la de abajo un tiramisú, con una capa
-   blanca semitransparente encima para que el texto se lea bien. */
+
 
 .Donde-comer-container {
     position: relative;
@@ -27,13 +25,13 @@
 
 .Donde-comer-container::before {
     top: 0;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.70), rgba(255, 255, 255, 0.70)),
+    background-image: linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)),
         url("https://commons.wikimedia.org/wiki/Special:FilePath/Eq_it-na_pizza-margherita_sep2005_sml.jpg?width=1000");
 }
 
 .Donde-comer-container::after {
     bottom: 0;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.70), rgba(255, 255, 255, 0.70)),
+    background-image: linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)),
         url("https://commons.wikimedia.org/wiki/Special:FilePath/Tiramisu_-_Raffaele_Diomede.jpg?width=1000");
 }
 

@@ -15,110 +15,268 @@
 </head>
 
 <body>
-    <header>
-        <h1>Lugares</h1>
-        <button id="btnModo" class="btn btn-outline-dark">Modo claro</button>
-        <nav>
+    <header class="navbar-header">
+        <h1> <a href="index.html" class="logo-container">
+                <img src="imagenes/LOGO2.png" alt="Escudo SPQR Roma" class="logo-img">
+            </a></h1>
+
+
+        <nav class="nav-container">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="ciudad.html">Ciudad</a></li>
                 <li><a href="lugares.html">Lugares</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
+            <button id="btnModo" class="btn-modo">Modo claro</button>
         </nav>
 
     </header>
     <main>
-        <section class="hero">
+        <section class="hero hero-lugares">
             <div class="hero-content">
-                <h2>Roma</h2>
-                <p>Explora los lugares
-                    más interesantes de nuestra ciudad.</p>
+                <h2>Veni y vivi Roma </h2>
+                <p>Explora los tesoros históricos y culturales de Roma, desde el majestuoso Coliseo hasta la
+                    impresionante Galería Borghese. Sumérgete en la historia y la belleza de esta ciudad eterna.
+                </p>
             </div>
         </section>
         <section>
-            <h3>Visitas guiadas por el coliseo, el castillo de San Angelo y la Galería Borghese</h3>
+            <h3>Excursiones y actividades en Roma</h3>
+            <p>Descubre los lugares más emblemáticos de Roma y sumérgete en su historia y cultura. Desde el Coliseo
+                hasta la Galería Borghese, cada sitio ofrece una experiencia única que te transportará a la grandeza del
+                pasado.</p>
 
             <div class="gallery">
                 <div class="gallery-item">
-                    <a href="#artColiseo">
-                        <img src="imagenes/coliseo.png" alt="" width="600" height="400">
-                    </a>
+                    <img src="imagenes/coliseo.png" alt="Coliseo de Roma" width="600" height="400">
                     <div class="card-body">
                         <h4 class="card-title">Coliseo</h4>
                         <p class="card-text">En esta visita conocerás la historia del Coliseo y sus alrededores.</p>
-                        <p class="card-text"><small class="fg-2">ver mas</small></p>
+                        <p class="card-text"><small class="fg-2"><a href="#artColiseo">ver mas</a></small></p>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <a href="#artCastillo">
-                        <img src="imagenes/castillo-puente-sant-angelo.png" alt="Castillo de San Angelo" width="600"
-                            height="400">
-                    </a>
+                    <img src="imagenes/castillo-puente-sant-angelo.png" alt="Castillo de San Angelo" width="600"
+                        height="400">
                     <div class="card-body">
                         <h4 class="card-title">Castillo de San Angelo</h4>
                         <p class="card-text">Descubre la historia y la arquitectura del Castillo de San Angelo.</p>
-                        <p class="card-text"><small class="fg-2">ver mas</small></p>
+                        <p class="card-text"><small class="fg-2"><a href="#artCastillo">ver mas</a></small></p>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <a href="#artBorghese">
-                        <img src="imagenes/galeria-borghese.png" alt="Galería Borghese" width="600" height="400">
-                    </a>
+                    <img src="imagenes/galeria-borghese.png" alt="Galería Borghese" width="600" height="400">
                     <div class="card-body">
                         <h4 class="card-title">Galería Borghese</h4>
                         <p class="card-text">Descubre la historia y la arquitectura de la Galería Borghese.</p>
-                        <p class="card-text"><small class="fg-2">ver mas</small></p>
+                        <p class="card-text"><small class="fg-2"><a href="#artBorghese">ver mas</a></small></p>
                     </div>
                 </div>
             </div>
 
-            <section class="articulos">
+
+            <div class="articulos">
                 <article id="artBorghese">
-                    <h5>Galería Borghese</h5>
-                    <p>La Galería Borghese es un museo de arte italiano ubicado en Roma.<strong>Es uno de los museos más
-                            importantes de la ciudad </strong> y alberga una impresionante colección de obras de arte.
-                    </p>
+                    <div class="card-body">
+                        <h4 class="card-title">Galería Borghese</h4>
+                        <p class="card-text">
+                            La Galería Borghese <strong>es un museo de arte italiano ubicado en Roma</strong>. Es uno de
+                            los museos más importantes de la ciudad y alberga una impresionante colección de obras de
+                            arte.
+                        </p>
+                        <div class="container my-5">
+                            <h5 class="mb-3">Horarios de visita</h5>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Días</th>
+                                        <th scope="col">Apertura</th>
+                                        <th scope="col">Cierre</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Lunes a Viernes</td>
+                                        <td>09:00 hs</td>
+                                        <td>20:00 hs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sábados</td>
+                                        <td>10:00 hs</td>
+                                        <td>18:00 hs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Domingos</td>
+                                        <td>Cerrado</td>
+                                        <td>Cerrado</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
-                    <figure>
-                        <img src="imagenes/galeria-borghese.png" alt="Galería Borghese">
-                        <figcaption>Galería Borghese</figcaption>
+                        <div class="d-inline-flex gap-1">
+                            <a class="btn-solid theme-primary" data-bs-toggle="collapse" href="#galeriaFoto"
+                                role="button" aria-expanded="false" aria-controls="collapseExample">
+                                ver Foto
+                            </a>
+                        </div>
 
-                    </figure>
+                        <div class="collapse" id="galeriaFoto">
+                            <div class="card card-body">
+                                <figure>
+                                    <img src="imagenes/salas-galeria-borghese.png" alt="Galería Borghese">
+                                    <figcaption>Galería Borghese</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                 </article>
+
                 <article id="artColiseo">
-                    <h5>Coliseo</h5>
-                    <p>El Coliseo es un anfiteatro romano ubicado en el centro de Roma. <strong>Es uno de los monumento
-                            mas más
-                            emblemáticos de la ciudad y un símbolo del Imperio Romano.</strong></p>
-                    <figure>
-                        <img src="imagenes/coliseo.png" alt="Coliseo de Roma">
-                        <figcaption>Coliseo</figcaption>
-                    </figure>
+                    <div class="card-body">
+                        <h4 class="card-title">Coliseo</h4>
+                        <p class="card-text">
+                            El Coliseo <strong>es un anfiteatro romano ubicado en el centro de Roma</strong>. Es uno de
+                            los monumentos más emblemáticos de la ciudad y un símbolo del Imperio Romano.
+                        </p>
+                        <div class="container my-5">
+                            <h5 class="mb-3">Horarios de visita</h5>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Días</th>
+                                        <th scope="col">Apertura</th>
+                                        <th scope="col">Cierre</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Lunes a Viernes</td>
+                                        <td>09:00 hs</td>
+                                        <td>20:00 hs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sábados</td>
+                                        <td>10:00 hs</td>
+                                        <td>18:00 hs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Domingos</td>
+                                        <td>Cerrado</td>
+                                        <td>Cerrado</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="d-inline-flex gap-1">
+                            <a class="btn-solid theme-primary" data-bs-toggle="collapse" href="#coliseoFoto"
+                                role="button" aria-expanded="false" aria-controls="collapseExample">
+                                ver Foto
+                            </a>
+                        </div>
+
+                        <div class="collapse" id="coliseoFoto">
+                            <div class="card card-body">
+                                <figure>
+                                    <img src="imagenes/coliseo-arena-gladiadores.png"
+                                        alt="Coliseo de Roma iluminado de noche">
+                                    <figcaption>Coliseo</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                 </article>
+
                 <article id="artCastillo">
-                    <h5>Castillo de San Angelo</h5>
-                    <p>El Castillo de San Angelo <strong> es un fortín ubicado en el río Tíber</strong>, en la ciudad de
-                        Roma. Fue construido
-                        en el siglo IV d.C. y ha sido utilizado como fortaleza a lo largo de la historia.</p>
-                    <figure>
-                        <img src="imagenes/castillo-puente-sant-angelo.png"
-                            alt="Castillo de San Angelo y Puente Sant'Angelo">
-                        <figcaption>Castillo de San Angelo</figcaption>
-                    </figure>
+                    <div class="card-body">
+                        <h4 class="card-title">Castillo de San Angelo</h4>
+                        <p class="card-text">
+                            El Castillo de San Angelo <strong>es un fortín ubicado en el río Tíber</strong>, en la
+                            ciudad de Roma. Fue construido en el siglo IV d.C. y ha sido utilizado como fortaleza a lo
+                            largo de la historia.
+                        </p>
+                        <div class="container my-5">
+                            <h5 class="mb-3">Horarios de visita</h5>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Días</th>
+                                        <th scope="col">Apertura</th>
+                                        <th scope="col">Cierre</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Lunes a Viernes</td>
+                                        <td>09:00 hs</td>
+                                        <td>20:00 hs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sábados</td>
+                                        <td>10:00 hs</td>
+                                        <td>18:00 hs</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Domingos</td>
+                                        <td>Cerrado</td>
+                                        <td>Cerrado</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="d-inline-flex gap-1">
+                            <a class="btn-solid theme-primary" data-bs-toggle="collapse" href="#castilloFoto"
+                                role="button" aria-expanded="false" aria-controls="collapseExample">
+                                ver Foto
+                            </a>
+                        </div>
+
+                        <div class="collapse" id="castilloFoto">
+                            <div class="card card-body">
+                                <figure>
+                                    <img src="imagenes/castillo-vistas-terraza.png"
+                                        alt="Castillo de San Angelo y Puente Sant'Angelo iluminados de noche sobre el río Tíber">
+                                    <figcaption>Castillo de San Angelo</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                 </article>
-                <aside>
-                    <h4>Información adicional</h4>
-                    <p>Tambien podes visitar muy cercano a estos lugares el vaticano.</p>
-                </aside>
-            </section>
+            </div>
+
+            <aside class="container my-4">
+                <h6>Comentarios</h6>
+                <p>Discfrutaste el viaje a Roma?</p>
+
+                <!-- Formulario para escribir el comentario -->
+                <form id="comment-form" class="mb-3">
+                    <div class="mb-2">
+                        <input type="text" id="comment-input" class="form-control"
+                            placeholder="Escribe tu comentario aquí..." required>
+                    </div>
+                    <button type="submit" class="btn btn-dark btn-sm">Publicar</button>
+                </form>
+
+                <!-- Lista donde se irán acumulando los comentarios -->
+                <div id="comments-list">
+                    <div id="comments-list">
+                        <div class="alert alert-light border py-2 mb-2">¡Hermoso lugar! El Coliseo de noche es
+                            imperdible.</div>
+                        <div class="alert alert-light border py-2 mb-2">Muy buena la info, me sirvió un montón para
+                            armar el recorrido.</div>
+                    </div>
+                </div>
+            </aside>
+        </section>
 
     </main>
+
     <footer>
-
-
         <p>&copy; 2026 sitio oficial de la ciudad. Todos los derechos reservados.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

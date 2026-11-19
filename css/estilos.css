@@ -328,3 +328,62 @@ img {
     height: auto;
     display: block;
 }
+
+/* Estilos del formulario de contacto */
+.form-contacto {
+    max-width: 550px;
+    margin: 25px auto;
+    padding: 25px 30px;
+    text-align: left;
+    color: #222222;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.campo-form label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.campo-form input,
+.campo-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+    outline: none;
+    border-color: #8b2626;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 12px;
+    background-color: #8b2626;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-enviar:hover {
+    background-color: #6e1d1d;
+}
+
+.datos-extra {
+    text-align: center;
+    padding-bottom: 30px;
+}

@@ -22,10 +22,9 @@ body {
 }
 
 body.modo-claro {
-    background-color: #fdf2f0;
-    /* Fondo rojizo/crema muy suave */
-    color: #4a151b;
-    /* Texto borgoña oscuro para excelente lectura */
+    --color-fondo: #fdf2f0;
+    --color-texto: #4a151b;
+    --color-headerBarra: #ffffff;
 }
 
 body.modo-claro header {
@@ -34,14 +33,19 @@ body.modo-claro header {
 }
 
 body.modo-claro header ul li a {
-    color: #800020;
+    color: #4a151b;
 }
 
 body.modo-claro header ul li a:hover {
     color: #F5A100;
 }
 
-
+ul li a:hover:not(.active),
+.nav-links a:hover {
+    background-color: var(--color-hover); 
+    color: #4a151b !important;
+    border-radius: 999px;
+}
 
 
 

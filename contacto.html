@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Turismo en Roma</title>
 </head>
 
+
 <body>
     <header>
-        <h1>Turismo en Roma</h1>
-
+        <a href="index.html" class="logo-container">
+            <img src="imagenes/LOGO2.png" alt="Escudo SPQR Roma" class="logo-img">
+        </a>
 
         <nav>
             <ul>
@@ -20,32 +23,55 @@
                 <li><a href="lugares.html">Lugares</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
+            <button id="btnModo" class="btn-modo">Modo claro</button>
         </nav>
     </header>
+
     <main>
         <hr>
 
-        <h2>Contacto</h2>
+        <section id="contacto" class="seccion-contenido">
+            <h2>Contactanos</h2>
+            <p class="subtitulo">Completa el formulario y nos pondremos en contacto contigo.</p>
 
-        <form>
-            Nombre:<br>
-            <input type="text"><br><br>
+            <form id="formulario-contacto" class="tarjeta form-contacto">
+                <div class="campo-form">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
 
-            Email:<br>
-            <input type="email"><br><br>
+                <div class="campo-form">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" required>
+                </div>
 
-            Mensaje:<br>
-            <textarea rows="4" cols="30"></textarea><br><br>
+                <div class="campo-form">
+                    <label for="Teléfono">Telefono:</label>
+                    <input type="Teléfono" id="Teléfono" name="Teléfono" placeholder="+54 9 11 5489 4785" required>
+                </div>
 
-            <button>Enviar</button>
-        </form>
+                <div class="campo-form">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribí tu consulta acá..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+        </section>
 
         <hr>
 
-        <h3>Otros datos</h3>
-        <p>Ubicacion: Corrientes 7516, CABA</p>
-        <p>Telefono: 11 7568 4651</p>
+        <section class="seccion-contenido datos-extra">
+            <h3>Contacto</h3>
+            <p>Ubicación: Corrientes 7516, Ciudad Autónoma de Buenos Aires</p>
+            <p>Teléfono: +54 9 11 7568-4651</p>
+        </section>
     </main>
+
+    <footer>
+        <p>© 2026 sitio oficial de la ciudad. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

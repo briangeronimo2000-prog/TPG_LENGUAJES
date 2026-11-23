@@ -387,3 +387,13 @@ img {
     text-align: center;
     padding-bottom: 30px;
 }
+.office {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 15px;
+}

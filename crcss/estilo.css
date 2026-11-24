@@ -1,0 +1,107 @@
+
+   :root {
+            --primary-color: #49a565;
+            /* verde */
+            --secondary-color: #da2020;
+            /* rojo */
+            --text-color: #191a1a;
+            /* color del texto de la pagina */
+            --bg-color: #f7efd2;
+            /* color fondo pagina Blanco marfil */
+            --card-bg: rgb(255, 255, 255);
+            /* color de fondo de las tarjetas */
+        }
+
+    * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            /* color del texto de la pagina */
+            background-color: var(--bg-color);
+        }
+
+    header {
+            
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url("https://upload.wikimedia.org/wikipedia/commons/0/0b/Rome_skyline_panorama.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ffffff;
+            /*color del texto del encabezado */
+            padding: 100px 20px;
+            text-align: center;
+            filter: contrast(108%) brightness(102%);
+
+        }
+
+        header h1 {
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-style: italic;
+            font-size: 2rem;
+            color: var(--secondary-color);
+        }
+
+       
+    .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        .container section {
+            scroll-margin-top: 80px;
+
+        }
+        
+
+    section {
+            background: var(--card-bg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(218, 147, 147, 0.63);
+        
+            border-left: 5px solid var(--primary-color);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #918b8b;
+            /* color de la linea debajo del titulo */
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        
+
+     footer {
+            background-color: #222;
+            /* color de fondo del pie de pagina */
+            color: #ccc;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        footer span {
+            color: var(--secondary-color);
+        }

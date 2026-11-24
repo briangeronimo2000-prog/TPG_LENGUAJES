@@ -1,0 +1,24 @@
+.datos-tabla {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .datos-tabla th,
+        .datos-tabla td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            /*color de las lineas de la tabla */
+        }
+
+        .datos-tabla th {
+            background-color: var(--primary-color);
+            /* color de los encabezados de la tabla */
+            color: white;
+        }
+
+        .datos-tabla tr:nth-child(even) {
+            background-color: #f9f9f9;
+            /* color de las filas pares de la tabla */
+        }

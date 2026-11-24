@@ -1,0 +1,37 @@
+.Donde-comer-container {
+  display: flex;              /* Pone los artículos uno al lado del otro */
+  flex-wrap: wrap;            /* Baja las tarjetas si no entran en pantalla */
+  align-items: flex-start;    /* Evita que una tarjeta corta se estire a la altura de una más larga */
+  gap: 15px;                  /* Separación entre tarjetas */
+  max-width: 1000px;          /* Mismo ancho máximo que tu .container general */
+  margin: 2rem auto;          /* Centra el contenedor en la página */
+  padding: 20px;              /* Espacio interior */
+  background-color: rgb(239, 240, 231); 
+  border-radius: 8px;
+}
+
+
+.Donde-comer-container h2 {
+  width: 100%;                /* Ocupa todo el ancho arriba de las tarjetas */
+  background:var(--primary-color); 
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin: 0 0 10px 0;
+  border-radius: 6px;
+}
+
+/* Cada tarjeta (<article>) adaptada al tamaño de su texto y con efecto cristalino */
+.Donde-comer-container article {
+  flex: 0 1 auto;             /* Se ajusta exactamente al ancho de su contenido sin estirarse */
+  max-width: 100%;            /* Evita que un texto muy largo se salga del contenedor en celulares */
+  padding: 15px 20px;
+  border-radius: 8px;
+
+  /* Efecto cristalino casi transparente */
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}

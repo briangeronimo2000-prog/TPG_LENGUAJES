@@ -56,32 +56,45 @@
                 </div>
 
                 <button type="submit" class="btn-enviar">Enviar</button>
+
             </form>
         </section>
-<hr>
+    <hr>
+
+        <div class="contenedor-busqueda">
+            <form id="BarraBusqueda" class="barra" action="#Oficinas" method="GET">
+                    <label for="busqueda">Buscar oficinas:</label>
+                    <input type="search" id="busqueda" name="q" placeholder="Buscar Oficinas" required>
+                    <button type="submit" class="btn-buscar">Buscar</button>
+            </form>
+        </div>
         
         <section id="Oficinas" class="Nuestras Oficinas">
             <h2>Visita nuestras oficinas turisticas</h2>
             <p class="subtitulo">Podrás obtener toda la información sobre el Tour de Roma</p>
 
-            <div class="office">
+            <div id="sedes" class="parent">
                 
-                <div class="tarjeta-1">
+                <div class="tarjeta">
                     <img src="imagenes/oficina1.jpg" alt="Oficina Sede Central">
                     <h3>Oficina Sede Central</h3>
                     <p>Ubicada en pleno microcentro porteño, nuestra oficina principal ofrece asesoramiento integral, gestión de pasajes y armado de paquetes personalizados para volar directo desde Buenos Aires hacia la Ciudad Eterna.</p>
+                    <button class="btn-modo" type="button" onclick="window.location.href='https://maps.app.goo.gl/kqEnRcRyj9953QDX7'">Ver Ubicacion</button>
                 </div>
+            
 
-                <div class="tarjeta-2">
+                <div class="tarjeta">
                     <img src="imagenes/oficina2.jpg" alt="Oficina Sede Norte">
                     <h3>Oficina Sede Norte</h3>
                     <p>Situada estratégicamente en el corredor norte (Corrientes), brinda atención cercana para los viajeros del norte del país que buscan planificar su itinerario a Roma con conexiones aéreas a medida.</p>
+                    <button class="btn-modo" type="button" onclick="window.location.href='https://maps.app.goo.gl/2H2xQZoPuhJVJCJn7'">Ver Ubicacion</button>
                 </div>
 
-                <div class="tarjeta-3">
+                <div class="tarjeta">
                     <img src="imagenes/oficina3.jpg" alt="Oficina Sede Sur">
                     <h3>Oficina Sede Sur</h3>
                     <p>Pensada para los viajeros de la Patagonia, nuestra sucursal en el sur argentino gestiona traslados combinados, estadías y excursiones exclusivas para que tu viaje a Roma empiece sin complicaciones desde tu ciudad.</p>
+                    <button class="btn-modo" type="button" onclick="window.location.href='https://maps.app.goo.gl/9BhawtRTPrssiks56'">Ver Ubicacion</button>
                 </div>
 
             </div>

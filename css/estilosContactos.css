@@ -101,7 +101,7 @@ h2 {
     height: 70px;
     width: 70px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: cover; /*Llena todo el contenedor manteniendo la proporción*/
 }
 
 .parent {
